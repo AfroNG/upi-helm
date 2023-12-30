@@ -3,13 +3,13 @@ entries:
   moja-switch:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-12-30T10:13:16.506214208+01:00"
+    created: "2023-12-30T10:27:01.430115397+01:00"
     description: A Helm chart for Kubernetes
-    digest: 6f5b6d601e0357834bb05b92d9359c144a3b241b2970eb3aaac75c0451b5101e
+    digest: 39b89813a00d8b6dae939da67697518811acef27c5f94d78f892e115131506e9
     icon: https://github.com/darksuei/upi/blob/main/assets/upi_logo.jpeg
     name: moja-switch
     type: application
     urls:
-    - https://pharmdiv.github.io/AccountService-HelmChart/moja-switch-0.1.0.tgz
+    - https://pharmdiv.github.io/MojaSwitch-HelmChart/moja-switch-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-30T10:13:16.505435659+01:00"
+generated: "2023-12-30T10:27:01.429648711+01:00"

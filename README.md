@@ -1,2 +1,2 @@
-# AccountService-HelmChart
-This is the Helm chart repo for UPI account service
+# MojaSwitch-HelmChart
+This is the Helm chart repo for UPI moja-switch micrservice
