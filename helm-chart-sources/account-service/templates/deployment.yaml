@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: account-service
+  namespace: microservices
+  labels:
+    app: account-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: account-service
+  template:
+    metadata:
+      labels:
+        app: account-service
+      annotations:
+        dapr.io/app-id: "account-service"
+        dapr.io/app-port: '5000'
+        dapr.io/enable-metrics: 'true'
+        dapr.io/enabled: 'true'
+        dapr.io/metrics-port: '9099'
+        dapr.io/sidecar-listen-addresses: 0.0.0.0
+    spec:
+      containers:
+        - name: account-service
+          image: docker.io/darksuei/account-service-upi-v3.7
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          env:
+            - name: DB_PORT
+              value: "25060"
+            - name: NODE_ENV
+              value: "production"
+            - name: LOG_PATH
+              value: "./logs"
+            - name: LOG_LEVEL
+              value: "info"
+            - name: LOG_DISABLED
+              value: "false"
+            - name: JWT_SECRET
+              value: "a4572f12e96b981b71d247d3d2467d6984450a1363daa60f3825786b5d9ee540"
+            - name: JWT_EXPIRES_IN
+              value: "1d"
+            - name: DB_USERNAME
+              value: "doadmin"
+            - name: DB_PASSWORD
+              value: "AVNS_W46qm467C_cWTsVrsOB"
+            - name: DB_DATABASE
+              value: "moja_account_service"
+            - name: DB_DATABASE_TYPE
+              value: "postgres"
+            - name: DB_HOST
+              value: "mojaloop-db-do-user-10555812-0.c.db.ondigitalocean.com"
+            - name: DAPR_HTTP_PORT
+              value: "3500"
