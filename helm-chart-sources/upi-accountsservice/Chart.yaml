@@ -1,6 +1,7 @@
 apiVersion: v2
 name: upi-accountService
 description: A Helm chart for Kubernetes
+icon: https://github.com/darksuei/upi/blob/main/assets/upi_logo.jpeg
 
 # A chart can be either an 'application' or a 'library' chart.
 #
