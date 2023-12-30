@@ -1,2 +1,2 @@
 # AccountService-HelmChart
-Helm chart repo for UPI account service
+This is the Helm chart repo for UPI account service
