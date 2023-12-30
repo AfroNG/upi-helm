@@ -3,57 +3,57 @@ entries:
   account-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-12-30T14:10:03.465753519+01:00"
+    created: "2023-12-30T22:43:46.69200374+01:00"
     description: A Helm chart for Kubernetes
-    digest: 7c321dcb710ad0481c25ce70326236ee23e07a617ed2ce492b65aae78377b141
+    digest: ba22ba47879d135451026a2fd5b9f2e2272c0da5c6209d40f33fe85e53754873
     name: account-service
     type: application
     urls:
-    - https://pharmdiv.github.io/UPI-HelmRepo/account-service-0.1.0.tgz
+    - https://afrong.github.io/UPI-HelmRepo/account-service-0.1.0.tgz
     version: 0.1.0
   admin-frontend:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-12-30T14:10:03.466341152+01:00"
+    created: "2023-12-30T22:43:46.692679433+01:00"
     description: A Helm chart for Kubernetes
-    digest: 8b75ce99a73f4589fba0cf39ac673271ea1054793cbc5720ac9e69514f98889e
+    digest: f37fcc16e60a814fddc4804863edf61c9af9645d86f2df25202149c0b14aa961
     name: admin-frontend
     type: application
     urls:
-    - https://pharmdiv.github.io/UPI-HelmRepo/admin-frontend-0.1.0.tgz
+    - https://afrong.github.io/UPI-HelmRepo/admin-frontend-0.1.0.tgz
     version: 0.1.0
   checkout-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-12-30T14:10:03.466818327+01:00"
+    created: "2023-12-30T22:43:46.69338984+01:00"
     description: A Helm chart for Kubernetes
-    digest: f43079ccd6e3d617d2d41c5b7dada4391bfa49b5b0cb431ef0d805a896c36672
+    digest: ac64b9fac1ccfd529ef1feace1d69def62bd34560d568867f30f2fe03c2b69a7
     name: checkout-service
     type: application
     urls:
-    - https://pharmdiv.github.io/UPI-HelmRepo/checkout-service-0.1.0.tgz
+    - https://afrong.github.io/UPI-HelmRepo/checkout-service-0.1.0.tgz
     version: 0.1.0
   digilocker:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-12-30T14:10:03.467326813+01:00"
+    created: "2023-12-30T22:43:46.694082857+01:00"
     description: A Helm chart for Kubernetes
-    digest: 85270b80d0e8cb23050d6c838976ca57da2907f6d5c1973f5f671b410d3d4083
+    digest: 28a2122fbf45288709110f7a2c8b748dc5b48a7e22d1ed2ccc989daad945192f
     name: digilocker
     type: application
     urls:
-    - https://pharmdiv.github.io/UPI-HelmRepo/digilocker-0.1.0.tgz
+    - https://afrong.github.io/UPI-HelmRepo/digilocker-0.1.0.tgz
     version: 0.1.0
   moja-switch:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-12-30T14:10:03.46784611+01:00"
+    created: "2023-12-30T22:43:46.694758669+01:00"
     description: A Helm chart for Kubernetes
-    digest: 2cdd1903c5794fd339cfffb617fcdc00959c4b127484fd9ddf4afce39c686a9b
+    digest: 444bdb8584414b6188fdcd4475af240e8598da759e25a112fd4e37b4a1243e2f
     icon: https://github.com/darksuei/upi/blob/main/assets/upi_logo.jpeg
     name: moja-switch
     type: application
     urls:
-    - https://pharmdiv.github.io/UPI-HelmRepo/moja-switch-0.1.0.tgz
+    - https://afrong.github.io/UPI-HelmRepo/moja-switch-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-30T14:10:03.46474598+01:00"
+generated: "2023-12-30T22:43:46.691096495+01:00"
