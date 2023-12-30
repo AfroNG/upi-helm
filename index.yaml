@@ -3,24 +3,24 @@ entries:
   moja-switch:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-12-30T12:13:02.715098597+01:00"
+    created: "2023-12-30T13:00:30.525782819+01:00"
     description: A Helm chart for Kubernetes
-    digest: a7b61a344f4664721e090583f83cc0fa512cb9a0adbd4a078f99e45476505178
+    digest: abc0e6546200efafee58af6627b0bbed064235a1d9b10b8c425b18a001183ca0
     icon: https://github.com/darksuei/upi/blob/main/assets/upi_logo.jpeg
     name: moja-switch
     type: application
     urls:
-    - https://pharmdiv.github.io/UPI-HelmRepo/moja-switch-0.1.0.tgz
+    - https://pharmdiv.github.io/UPI-HelmR/moja-switch-0.1.0.tgz
     version: 0.1.0
   upi-accountservice:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-12-30T12:13:02.715882702+01:00"
+    created: "2023-12-30T13:00:30.526143018+01:00"
     description: A Helm chart for Kubernetes
-    digest: bbb8e39def8ece8645ed173fd206f813db54cf34e8898a008324ae6bccd09140
+    digest: 0d670c743350a7e76e19e0d5dd3e7d5001ebc496cb00de821a985dbe37fb7d84
     name: upi-accountservice
     type: application
     urls:
-    - https://pharmdiv.github.io/UPI-HelmRepo/upi-accountservice-0.1.0.tgz
+    - https://pharmdiv.github.io/UPI-HelmR/upi-accountservice-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-30T12:13:02.714502894+01:00"
+generated: "2023-12-30T13:00:30.525164238+01:00"
