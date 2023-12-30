@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  upi-accountService:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-12-30T09:34:41.87035366+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 5d3a6253dbff4e34a6d82dfd75cd13273c220a6f71550330222a5351a975fa40
+    icon: https://github.com/darksuei/upi/blob/main/assets/upi_logo.jpeg
+    name: upi-accountService
+    type: application
+    urls:
+    - https://pharmdiv.github.io/AccountService-HelmChart/upi-accountService-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-12-30T09:34:41.867433618+01:00"
