@@ -1,0 +1,25 @@
+app:
+    name: upi-audit-svc
+    port: 5002
+    image:
+        repository: docker.io/darksueii/upi-audit-svc-v0.0.11
+        tag: latest
+        pullPolicy: Always
+    replicas: 1
+    namespace: upi
+
+dapr:
+    appId: upi-audit-svc
+    appPort: 5002
+    enableMetrics: true
+    enabled: true
+    metricsPort: 9099
+    sidecarListenAddresses: 0.0.0.0
+
+apisix:
+    host: audit-svc.upi.dev
+    path: /*
+
+service:
+    type: ClusterIP
+    protocol: TCP

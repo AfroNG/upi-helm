@@ -17,10 +17,8 @@ dapr:
     sidecarListenAddresses: 0.0.0.0
 
 apisix:
-    hosts:
-        - acct-svc.upi.dev
-    paths:
-        - /*
+    host: acct-svc.upi.dev
+    path: /*
 
 service:
     type: ClusterIP

@@ -1,0 +1,53 @@
+app:
+    name: upi-payment-svc
+    port: 3001
+    image:
+        repository: docker.io/afrong/upi-payment-svc
+        tag: 12
+        pullPolicy: Always
+    replicas: 1
+    namespace: upi
+
+dapr:
+    appId: upi-payment-svc
+    appPort: 3001
+    enableMetrics: true
+    enabled: true
+    metricsPort: 9099
+    sidecarListenAddresses: 0.0.0.0
+
+apisix:
+    host: moja-switch.upi.dev
+    path: /*
+
+service:
+    type: ClusterIP
+    protocol: TCP
+
+secret:
+    name: upi-payment-svc-secret
+    data:
+        NODE_ENV: 'production'
+        LOG_PATH: './logs'
+        LOG_LEVEL: 'info'
+        LOG_DISABLED: 'false'
+        JWT_SECRET: 'a4572f12e96b981b71d247d3d2467d6984450a1363daa60f3825786b5d9ee540'
+        JWT_EXPIRES_IN: '1d'
+        DB_USERNAME: 'yugabyte'
+        DB_PASSWORD: 'yugabyte'
+        DB_DATABASE: 'upi_afropay_svc'
+        DB_PORT: '5433'
+        DB_DATABASE_TYPE: 'postgres'
+        DB_HOST: '45.55.106.137'
+        HOST: '0.0.0.0'
+        APP_PORT: '3001'
+        ACCOUNT_SERVICE_URL: 'https://acct-svc.upi.dev/api/v1'
+        CHECKOUT_URL: 'https://checkout.upi.dev/checkout'
+        DAPR_PUBSUB_NAME: 'upipubsub'
+        DAPR_STATE_STORE_NAME: 'statestore'
+        DAPR_HTTP_PORT: '3500'
+        DAPR_BASE_URL: 'http://localhost:3500/api/v1'
+        ACCOUNT_SERVICE_DAPR_APP_ID: 'auth-service'
+        HASH_SECRET: '65e45925bed8f54c4380d064ffce4fa6'
+        HASH_IV: '65e45925bed8f54c4380d064ffce4fa6'
+        DEFAULT_DFSP_ID: '001'

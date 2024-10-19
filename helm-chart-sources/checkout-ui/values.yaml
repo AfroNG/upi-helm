@@ -1,0 +1,17 @@
+app:
+    name: upi-checkout-ui
+    port: 3000
+    image:
+        repository: docker.io/afrong/upi-checkout-frontend
+        tag: latest
+        pullPolicy: Always
+    replicas: 1
+    namespace: upi
+
+apisix:
+    host: checkout.upi.dev
+    path: /*
+
+service:
+    type: ClusterIP
+    protocol: TCP

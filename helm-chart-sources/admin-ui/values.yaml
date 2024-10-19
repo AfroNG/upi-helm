@@ -1,0 +1,17 @@
+app:
+    name: upi-admin-ui
+    port: 3000
+    image:
+        repository: docker.io/darksueii/admin-frontend-upi-v100
+        tag: latest
+        pullPolicy: Always
+    replicas: 1
+    namespace: upi
+
+apisix:
+    host: admin.upi.dev
+    path: /*
+
+service:
+    type: ClusterIP
+    protocol: TCP
