@@ -1,0 +1,16 @@
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: {{ .Values.app.name }}
+  namespace: {{ .Values.app.namespace }}
+spec:
+  http:
+    - name: {{ .Values.app.name }}
+      match:
+        hosts:
+          - {{ .Values.apisix.host }}
+        paths:
+          - {{ .Values.apisix.paths }}
+      backends:
+        - serviceName: {{ .Values.app.name }}
+          servicePort: {{ .Values.app.port }}

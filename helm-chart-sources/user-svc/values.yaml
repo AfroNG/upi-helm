@@ -1,0 +1,65 @@
+app:
+    name: upi-user-svc
+    port: 5008
+    image:
+        repository: docker.io/afrong/upi-user-svc
+        tag: 35
+        pullPolicy: Always
+    replicas: 1
+    namespace: upi
+
+dapr:
+    appId: upi-user-svc
+    appPort: 5008
+    enableMetrics: true
+    enabled: true
+    metricsPort: 9099
+    sidecarListenAddresses: 0.0.0.0
+
+apisix:
+    hosts:
+        - acct-svc.upi.dev
+    paths:
+        - /*
+
+service:
+    type: ClusterIP
+    protocol: TCP
+
+secret:
+    name: upi-user-svc-secret
+    data:
+        NODE_ENV: 'production'
+        LOG_PATH: './logs'
+        LOG_LEVEL: 'info'
+        LOG_DISABLED: 'false'
+        JWT_SECRET: 'a4572f12e96b981b71d247d3d2467d6984450a1363daa60f3825786b5d9ee540'
+        JWT_EXPIRES_IN: '1d'
+        DB_USERNAME: 'yugabyte'
+        DB_PASSWORD: 'yugabyte'
+        DB_DATABASE: 'upi_user_svc'
+        DB_PORT: '5433'
+        DB_DATABASE_TYPE: 'postgres'
+        DB_HOST: '143.244.201.209'
+        MOJALOOP_SWITCH_URL: 'https://moja-switch.upi.dev/api/v1'
+        NOVU_API_KEY: '1892df3ef066473cfbbfd21db62f987e'
+        NOVU_BACKEND_URL: 'https://notification.upi.dev'
+        APP_PORT: '5008'
+        HOST: '0.0.0.0'
+        DAPR_HTTP_PORT: '3500'
+        DAPR_PUBSUB_NAME: 'upipubsub'
+        DAPR_STATE_STORE_NAME: 'statestore'
+        UPI_DIGILOCKER_URL: 'https://digilocker-svc.upi.dev/'
+        KEYCLOAK_RSA_PUB_KEY: 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArJWHUxLTg1g95z1oH18OplO0yJrT0VhlGx8dFsZQydW9uoIsrKoYce+FNXMZKtT3asjrpme68WABgxIO4n4CGZOVpVY331mdPBlFBRBs446py78QBdjTzIEZh3Y2NQycfrQiXGZxTP9fE/yRUdra+WCQbAvmnDQVMtwppovt39N/uiyMYh/OQpmCVouFmIfWRsiJrObRY3kKYCBBpsuV27r7YV0Qv2P3ucwRJRa6SFIpz6z/I+cB4SpMqz3ucAEBYGxhjC9uK86eFqtGx5gIT5WQgK8RY31VDuXALUZ6HCpHAqLne27fCc1qMHchgGXFIhz6xAYa0jtcRaNGVgiM3wIDAQAB'
+        PERMIFY_HTTP_URL: 'http://161.35.253.217:3476'
+        PERMIFY_GRPC_URL: 'http://161.35.253.217:3478'
+        PERMIFY_ENTITY_ID: '31'
+        SET_ADMIN_ROLES: 'true'
+        SET_PERMIFY_SCHEMA: 'true'
+        ADMIN_DEFAULT_PASSWORD: 'Admin123#'
+        SUPER_ADMIN_DEFAULT_PASSWORD: 'Folarinnraphael576#!'
+        REDIS_HOST: 'redis-master.microservices.svc.cluster.local'
+        REDIS_PORT: '6379'
+        REDIS_USERNAME: 'default'
+        REDIS_PASSWORD: 'd1n0Dn8jdX'
+        TEMPORAL_ADDRESS: 10.245.201.74:7233
